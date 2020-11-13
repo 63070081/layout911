@@ -30,7 +30,7 @@ while($Result = mysqli_fetch_array($res))
 	<td>
 	<div class="input-group-append">
     <a href="#" class="btn btn-primary">ลบ</a>
-    <a href="insert.php" class="btn btn-primary">แก้ไข</a>>
+    <a href="form.html" class="btn btn-primary">แก้ไข</a>>
 	</td>
   </div>
   </tr>
