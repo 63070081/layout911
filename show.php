@@ -29,7 +29,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Link'];?></td>
 	<td>
 	<div class="input-group-append">
-    <a href="#" class="btn btn-primary">ลบ</a>
+    <a href="delete.php" class="btn btn-primary">ลบ</a>
     <a href="form.html" class="btn btn-primary">แก้ไข</a>>
 	</td>
   </div>
