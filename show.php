@@ -29,8 +29,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Link'];?></td>
 	<td>
 	<div class="input-group-append">
-    <button class="btn btn-primary" type="button">ลบ</button>
-    <button class="btn btn-danger" type="button">แก้ไข</button>
+    <a href="#" class="btn btn-primary">ลบ</a>
+    <a href="insert.php" class="btn btn-primary">แก้ไข</a>>
 	</td>
   </div>
   </tr>
