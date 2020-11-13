@@ -1,16 +1,16 @@
 <html>
 <head>
-<title>ThaiCreate.Com PHP & SQL Server (sqlsrv)</title>
+<title>Delete</title>
 </head>
 <body>
 <?php
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 
-	$serverName = "localhost";
-	$userName = "sa";
-	$userPassword = '';
-	$dbName = "mydatabase";
+	$serverName = "lovelanguage.mysql.database.azure.com";
+	$userName = "maxthanit@lovelanguage";
+	$userPassword = '20082544Max';
+	$dbName = "itflab";
 
 	$connectionInfo = array("Database"=>$dbName, "UID"=>$userName, "PWD"=>$userPassword, "MultipleActiveResultSets"=>true);
 
