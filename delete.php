@@ -2,7 +2,7 @@
 
 include "dbConn.php"; // Using database connection file here
 
-$id = $_GET['id']; // get id through query string
+$id = $_GET['Name']; // get id through query string
 
 $del = mysqli_query($db,"delete from tblemp where id = '$id'"); // delete query
 
