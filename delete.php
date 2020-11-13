@@ -20,9 +20,9 @@
 		die( print_r( sqlsrv_errors(), true));
 	}
 
-	$sql = "DELETE FROM customer
+	$sql = "DELETE FROM name
 				WHERE CustomerID = ? ";
-	$params = array($_GET["CustomerID"]);
+	$params = array($_GET["Name"]);
 
 	$stmt = sqlsrv_query( $conn, $sql, $params);
 	if( $stmt === false ) {
