@@ -13,6 +13,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table width="600" border="1">
+<table class="table table-bordered">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
@@ -30,6 +31,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 }
 ?>
+</table>
 </table>
 <?php
 mysqli_close($conn);
