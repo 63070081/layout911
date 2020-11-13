@@ -1,39 +1,19 @@
-<html>
-<head>
-<title>Delete</title>
-</head>
-<body>
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(~0);
 
-	$serverName = "lovelanguage.mysql.database.azure.com";
-	$userName = "maxthanit@lovelanguage";
-	$userPassword = '20082544Max';
-	$dbName = "itflab";
+include "dbConn.php"; // Using database connection file here
 
-	$connectionInfo = array("Database"=>$dbName, "UID"=>$userName, "PWD"=>$userPassword, "MultipleActiveResultSets"=>true);
+$id = $_GET['id']; // get id through query string
 
-	$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$del = mysqli_query($db,"delete from tblemp where id = '$id'"); // delete query
 
-	if( $conn === false ) {
-		die( print_r( sqlsrv_errors(), true));
-	}
-
-	$sql = "DELETE FROM name
-				WHERE CustomerID = ? ";
-	$params = array($_GET["Name"]);
-
-	$stmt = sqlsrv_query( $conn, $sql, $params);
-	if( $stmt === false ) {
-		 die( print_r( sqlsrv_errors(), true));
-	}
-	else
-	{
-		echo "Record delete successfully";
-	}
-
-	sqlsrv_close($conn);
+if($del)
+{
+    mysqli_close($db); // Close connection
+    header("location:all_records.php"); // redirects to all records page
+    exit;	
+}
+else
+{
+    echo "Error deleting record"; // display error message if not delete
+}
 ?>
-</body>
-</html>
