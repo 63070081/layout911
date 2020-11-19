@@ -12,13 +12,18 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM guestbook WHERE id=4";
+$id = $_GET['id']; // get id through query string
 
-if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
-} else {
-  echo "Error deleting record: " . $conn->error;
+$del = mysqli_query($db,"delete from guestbook where id = '$id'"); // delete query
+
+if($del)
+{
+    mysqli_close($db); // Close connection
+    header("location:all_records.php"); // redirects to all records page
+    exit;	
 }
-
-$conn->close();
+else
+{
+    echo "Error deleting record"; // display error message if not delete
+}
 ?>
