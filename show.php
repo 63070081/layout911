@@ -70,6 +70,9 @@ while($Result = mysqli_fetch_array($res))
 ?>
 </table>
 </table>
+<tr>
+<td><a href="edit.php?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
+</tr>
 <?php
 mysqli_close($conn);
 ?>
