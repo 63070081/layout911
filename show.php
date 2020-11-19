@@ -18,6 +18,18 @@ th {
   background-color: #4CAF50;
   color: white;
 }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -48,8 +60,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Link'];?></td>
 	<td>
 	<div class="input-group-append">
-    <a href="delete.php" class="btn btn-primary">ลบ</a>
-    <a href="form.html" class="btn btn-primary">แก้ไข</a>>
+    <td><a href="edit.php?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
+    <td><a href="delete.php?id=<?php echo $Result['id']; ?>" class="button">Delete</a></td>
 	</td>
   </div>
   </tr>
