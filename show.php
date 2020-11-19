@@ -59,7 +59,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
 	<td>
-    <td><a href="form.php?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
+    <td><a href="form.html?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
     <td><a href="delete.php?id=<?php echo $Result['id']; ?>" class="button">Delete</a></td>
 	</td>
   </div>
@@ -70,7 +70,7 @@ while($Result = mysqli_fetch_array($res))
 </table>
 </table>
 <tr>
-<td><a href="form.php?id=<?php echo $Result['id']; ?>" class="button">Add</a></td>
+<td><a href="form.html?id=<?php echo $Result['id']; ?>" class="button">Add</a></td>
 </tr>
 <?php
 mysqli_close($conn);
