@@ -59,7 +59,6 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
 	<td>
-	<div class="input-group-append">
     <td><a href="edit.php?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
     <td><a href="delete.php?id=<?php echo $Result['id']; ?>" class="button">Delete</a></td>
 	</td>
