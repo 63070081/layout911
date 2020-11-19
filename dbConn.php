@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost","root","","testDB");
+$db = mysqli_connect($conn, 'lovelanguage.mysql.database.azure.com', 'maxthanit@lovelanguage', '20082544Max', 'itflab', 3306);
 
 if(!$db)
 {
