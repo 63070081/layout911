@@ -1,19 +1,24 @@
 <?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
 
-include "dbConn.php"; // Using database connection file here
-
-$id = $_GET['Name']; // get id through query string
-
-$del = mysqli_query($db,"delete from tblemp where id = '$id'"); // delete query
-
-if($del)
-{
-    mysqli_close($db); // Close connection
-    header("location:show.php"); // redirects to all records page
-    exit;	
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-else
-{
-    echo "Error deleting record"; // display error message if not delete
+
+// sql to delete a record
+$sql = "DELETE FROM MyGuests WHERE id=3";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
 }
+
+$conn->close();
 ?>
