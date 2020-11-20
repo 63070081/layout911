@@ -5,10 +5,10 @@
 	<title>Comment Form</title>
 </head>
 <body>
-  	$id = $_GET['id'];
-	$res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = '%id');
-	$Result = mysqli_fetch_array($res);
-	<form action = "update.php" method = "post" id="CommentForm" >
+id = $_GET['id'];
+$res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = '%id');
+$Result = mysqli_fetch_array($res);
+    <form action = "update.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo$Result['Name'];> <br>
     Comment:<br>
