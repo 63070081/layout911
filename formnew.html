@@ -20,11 +20,11 @@
     $link = $_Result['Link']
     ?>
     Name:<br>
-    <input type="text" name = "name" id="idName" value="<?php echo $name;?>"><br>
+    <input type="text" name = "name" id="idName" value="<?php echo $Result['Name'];?>"><br>
     Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment" value="<?php echo $comment;?>"></textarea><br>  
+    <textarea rows="10" cols="20" name = "comment" id="idComment" value="<?php echo $Result['Comment'];?>"></textarea><br>  
     Link:<br>
-    <input type="text" name = "link" id="idLink" value="<?php echo $link;?>"> <br><br>
+    <input type="text" name = "link" id="idLink" value="<?php echo $Result['Link'];?>"> <br><br>
     <input type="submit" id="commentBtn">
   </form> 
 </body>
