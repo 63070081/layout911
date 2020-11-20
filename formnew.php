@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comment Form</title>
+</head>
+<body>
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'lovelanguage.mysql.database.azure.com', 'maxthanit@lovelanguage', '20082544Max', 'itflab', 3306);
@@ -7,14 +13,11 @@ if (mysqli_connect_errno($conn))
 }
 $id = $_GET['ID'];
 $res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id ');
-$Result = mysqli_fetch_array($res)
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Comment Form</title>
-</head>
-<body>
+<?php
+while($Result = mysqli_fetch_array($res))
+{
+?>
   <form action = "insert_new.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
@@ -24,5 +27,8 @@ $Result = mysqli_fetch_array($res)
     <input type="text" name = "link" id="idLink" value="<?php echo $Result['Link'];?>"> <br><br>
     <input type="submit" id="commentBtn">
   </form> 
+<?php
+}
+?>
 </body>
 </html>
