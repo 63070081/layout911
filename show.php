@@ -58,8 +58,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-    <td><a href="form.html?id=<?php echo $Result['id']; ?>" class="button">Edit</a></td>
-    <td><?php echo '<a href="delete.php?id='.$Result['id'].'">Delete</a>'?></td>
+    <td><a href="form.html?id=<?php echo $Result['ID']; ?>" class="button">Edit</a></td>
+    <td><?php echo '<a href="delete.php?id='.$Result['ID'].'" class="button">Delete</a>'?></td>
   </div>
   </tr>
 <?php
