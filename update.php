@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 
-$sql = "UPDATE guestbook SET Name='$name' ,Comment='$comment' ,Link='$link' WHERE id = '$id' ";
+$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 $del = "DELETE FROM guestbook WHERE id = $id";
 
 
