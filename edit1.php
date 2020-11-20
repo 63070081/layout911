@@ -18,7 +18,7 @@ $del = "DELETE FROM guestbook WHERE id = $id"; // delete query
 
 if(mysqli_query($conn, $del))
 {
-    echo "https://layout911.azurewebsites.net/form.html";
+    echo "Go Edit";
     header("location:show.php"); // redirects to all records page
     exit;	
 }
