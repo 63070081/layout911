@@ -68,7 +68,7 @@ while($Result = mysqli_fetch_array($res))
 </table>
 </table>
 <tr>
-<td><a href="form.html>" class="button">Add</a></td>
+<td><a href="form.html" class="button">Add</a></td>
 </tr>
 <?php
 mysqli_close($conn);
