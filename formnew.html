@@ -1,14 +1,15 @@
-<?php
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Comment Form</title>
 </head>
 <body>
-id = $_GET['id'];
-$res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = '%id');
-$Result = mysqli_fetch_array($res);
-    <form action = "update.php" method = "post" id="CommentForm" >
+  <form action = "update.php" method = "post" id="CommentForm" >
+    <?php
+    id = $_GET['id'];
+    $res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = '%id'');
+    $Result = mysqli_fetch_array($res);
+    ?>
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo$Result['Name'];> <br>
     Comment:<br>
@@ -19,4 +20,3 @@ $Result = mysqli_fetch_array($res);
   </form> 
 </body>
 </html>
-?>
