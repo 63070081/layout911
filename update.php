@@ -8,15 +8,16 @@ if (mysqli_connect_errno($conn))
 }
 
 
+$id = $_GET['id'];
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 
 $sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+$del = "DELETE FROM guestbook WHERE id = $id";
 
-
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql)), (mysqli_query($conn, $del)) {
     echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
