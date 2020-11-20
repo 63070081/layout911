@@ -22,7 +22,7 @@ while($Result = mysqli_fetch_array($res))
     <textarea rows="10" cols="20" name = "comment" id="idComment" value="<?php echo $Result['Comment'];?>"></textarea><br>  
     Link:<br>
     <input type="text" name = "link" id="idLink" value="<?php echo $Result['Link'];?>"> <br><br>
-    <input type="submit" id="commentBtn">
+    <input type="submit" id="commentBtn" value="<?php echo $Result['ID'];?>">
   </form> 
 </body>
 </html>
