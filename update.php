@@ -7,8 +7,9 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-
-$id = $_GET['id'];
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+$Result = mysqli_fetch_array($res);
+$id = $Result['ID'];
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $link = $_POST['link'];
