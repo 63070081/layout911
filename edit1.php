@@ -18,8 +18,15 @@ $del = "DELETE FROM guestbook WHERE id = $id"; // delete query
 
 if(mysqli_query($conn, $del))
 {
-    echo "Record deleted successfully";
+    echo "Go Edit";
     header("location:show.php"); // redirects to all records page
+    <html>
+      <body>
+      <tr>
+      <td><a href="form.html" class="button">Add</a></td>
+      </tr>
+      </body>
+     </html>
     exit;	
 }
 else
