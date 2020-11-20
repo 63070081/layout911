@@ -20,17 +20,17 @@ if(mysqli_query($conn, $del))
 {
     echo "Go Edit";
     header("location:show.php"); // redirects to all records page
-    <html>
-      <body>
-      <tr>
-      <td><a href="form.html" class="button">Add</a></td>
-      </tr>
-      </body>
-     </html>
     exit;	
 }
 else
 {
     echo "Error deleting record"; // display error message if not delete
 }
+<html>
+      <body>
+      <tr>
+      <td><a href="form.html" class="button">Add</a></td>
+      </tr>
+      </body>
+</html>
 ?>
