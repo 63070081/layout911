@@ -15,7 +15,7 @@ $id = $_GET['ID'];
 $res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id ');
 while($Result = mysqli_fetch_array($res))
 ?>
-  <form action = "insert_new.php" method = "post" id="CommentForm" >
+  <form action = "update.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
     Comment:<br>
