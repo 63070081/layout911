@@ -7,8 +7,6 @@ if (mysqli_connect_errno($conn))
 }
 $id = $_GET['ID];
 $res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id ');
-?>
-
 while($Result = mysqli_fetch_array($res))
 {
 <!DOCTYPE html>
@@ -29,3 +27,4 @@ while($Result = mysqli_fetch_array($res))
 </body>
 </html>
 }
+?>
