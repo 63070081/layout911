@@ -18,7 +18,9 @@ $del = "DELETE FROM guestbook WHERE id = $id"; // delete query
 
 if(mysqli_query($conn, $del))
 {
-    echo "Go Edit";
+    <form>
+    <input type="button" value="edit" onclick="https://layout911.azurewebsites.net/form.html'" />
+    </form>;
     header("location:show.php"); // redirects to all records page
     exit;	
 }
@@ -26,11 +28,3 @@ else
 {
     echo "Error deleting record"; // display error message if not delete
 }
-<html>
-      <body>
-      <tr>
-      <td><a href="form.html" class="button">Add</a></td>
-      </tr>
-      </body>
-</html>
-?>
