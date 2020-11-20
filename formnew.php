@@ -25,5 +25,4 @@ $Result = mysqli_fetch_array($res)
   </form> 
 </body>
 </html>
-}
 ?>
