@@ -20,7 +20,6 @@ if(mysqli_query($conn, $del))
 {
     echo "Record deleted successfully";
     header("location:show.php"); // redirects to all records page
-    <td><a href="form.html" class="button">Edit</a></td>
     exit;	
 }
 else
