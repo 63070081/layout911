@@ -14,9 +14,10 @@ $link = $_POST['link'];
 
 
 $sql = "UPDATE guestbook SET Name='$name' ,Comment='$comment' ,Link='$link' WHERE id = '$id' ";
+$del = "DELETE FROM guestbook WHERE id = $id";
 
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql, $del)) {
     echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
