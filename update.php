@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 
-$sql = "UPDATE guestbook (Name , Comment , Link) SET ('$name', '$comment', '$link') WHERE = $id";
+$sql = "UPDATE guestbook SET Name='$name' ,Comment='$comment' ,Link='$link' WHERE id = $id";
 
 
 if (mysqli_query($conn, $sql)) {
